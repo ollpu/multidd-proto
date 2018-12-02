@@ -25,9 +25,9 @@ const size_t default_blocksize = 1<<17;
 
 struct Worker {
   int input, output;
-  const long blocksize;
+  const size_t blocksize;
   string ofname;
-  Worker(int input, int output, int blocksize, string ofname)
+  Worker(int input, int output, size_t blocksize, string ofname)
     : input(input), output(output), blocksize(blocksize), ofname(ofname),
       progress(0), state(s_working)
   {}
